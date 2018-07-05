@@ -8,81 +8,9 @@
     "events" : [ ]
   } ],
   "categories" : [ ],
-  "events" : [ {
-    "id" : 1,
-    "name" : "login",
-    "displayName" : "Login",
-    "description" : "User Login",
-    "aliases" : [ ],
-    "attributes" : [ {
-      "name" : "accountNumber",
-      "required" : false
-    }, {
-      "name" : "userId",
-      "required" : false
-    } ]
-  }, {
-    "id" : 2,
-    "name" : "transfer",
-    "displayName" : "Transfer",
-    "description" : "Transfer between accounts",
-    "aliases" : [ ],
-    "attributes" : [ {
-      "name" : "fromAccount",
-      "required" : true
-    }, {
-      "name" : "amount",
-      "required" : true
-    }, {
-      "name" : "toAccount",
-      "required" : true
-    } ]
-  }, {
-    "id" : 3,
-    "name" : "deposit",
-    "displayName" : "Deposit",
-    "description" : "Deposit funds",
-    "aliases" : [ ],
-    "attributes" : [ {
-      "name" : "account",
-      "required" : true
-    }, {
-      "name" : "amount",
-      "required" : true
-    } ]
-  }, {
-    "id" : 4,
-    "name" : "billPay",
-    "displayName" : "Bill Pay",
-    "description" : "Payment of a bill",
-    "aliases" : [ ],
-    "attributes" : [ {
-      "name" : "payee",
-      "required" : true
-    }, {
-      "name" : "fromAccount",
-      "required" : true
-    }, {
-      "name" : "amount",
-      "required" : true
-    } ]
-  } ],
+  "events" : [ ],
   "attributes" : [ {
     "id" : 1,
-    "name" : "accountNumber",
-    "displayName" : "Account Number",
-    "description" : "Company account number",
-    "dataType" : "INT",
-    "indexed" : true,
-    "sortable" : true,
-    "required" : true,
-    "requestContext" : true,
-    "examples" : null,
-    "aliases" : [ ],
-    "constraints" : [ ],
-    "catalogId" : "DEFAULT"
-  }, {
-    "id" : 2,
     "name" : "ipAddress",
     "displayName" : "IP Address",
     "description" : "IP Address of the caller",
@@ -101,7 +29,7 @@
     } ],
     "catalogId" : "DEFAULT"
   }, {
-    "id" : 3,
+    "id" : 2,
     "name" : "userId",
     "displayName" : "UserId",
     "description" : "Id of the User",
@@ -115,11 +43,11 @@
     "constraints" : [ ],
     "catalogId" : "DEFAULT"
   }, {
-    "id" : 4,
+    "id" : 3,
     "name" : "loginId",
     "displayName" : "LoginId",
     "description" : "Id user logs in with",
-    "dataType" : "INT",
+    "dataType" : "STRING",
     "indexed" : true,
     "sortable" : true,
     "required" : true,
@@ -129,7 +57,7 @@
     "constraints" : [ ],
     "catalogId" : "DEFAULT"
   }, {
-    "id" : 5,
+    "id" : 4,
     "name" : "hostName",
     "displayName" : "Host Name",
     "description" : "Name of the server",
@@ -138,81 +66,6 @@
     "sortable" : true,
     "required" : false,
     "requestContext" : true,
-    "examples" : null,
-    "aliases" : [ ],
-    "constraints" : [ ],
-    "catalogId" : "DEFAULT"
-  }, {
-    "id" : 6,
-    "name" : "toAccount",
-    "displayName" : "To Account Number",
-    "description" : "Destination account",
-    "dataType" : "INT",
-    "indexed" : false,
-    "sortable" : false,
-    "required" : true,
-    "requestContext" : false,
-    "examples" : null,
-    "aliases" : [ ],
-    "constraints" : [ {
-      "constraintType" : {
-        "name" : "minValue"
-      },
-      "value" : "1"
-    } ],
-    "catalogId" : "DEFAULT"
-  }, {
-    "id" : 7,
-    "name" : "fromAccount",
-    "displayName" : "From Account Number",
-    "description" : "Source of funds",
-    "dataType" : "INT",
-    "indexed" : false,
-    "sortable" : false,
-    "required" : true,
-    "requestContext" : false,
-    "examples" : null,
-    "aliases" : [ ],
-    "constraints" : [ ],
-    "catalogId" : "DEFAULT"
-  }, {
-    "id" : 8,
-    "name" : "amount",
-    "displayName" : "Amount",
-    "description" : "Amount to transfer",
-    "dataType" : "BIG_DECIMAL",
-    "indexed" : false,
-    "sortable" : false,
-    "required" : true,
-    "requestContext" : false,
-    "examples" : null,
-    "aliases" : [ ],
-    "constraints" : [ ],
-    "catalogId" : "DEFAULT"
-  }, {
-    "id" : 9,
-    "name" : "account",
-    "displayName" : "Account Number",
-    "description" : "Accopunt number",
-    "dataType" : "INT",
-    "indexed" : false,
-    "sortable" : false,
-    "required" : true,
-    "requestContext" : false,
-    "examples" : null,
-    "aliases" : [ ],
-    "constraints" : [ ],
-    "catalogId" : "DEFAULT"
-  }, {
-    "id" : 10,
-    "name" : "payee",
-    "displayName" : "Payee",
-    "description" : "Recipient of payment",
-    "dataType" : "STRING",
-    "indexed" : false,
-    "sortable" : false,
-    "required" : true,
-    "requestContext" : false,
     "examples" : null,
     "aliases" : [ ],
     "constraints" : [ ],
