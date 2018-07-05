@@ -69,6 +69,47 @@
       "name" : "userId",
       "required" : false
     } ]
+  }, {
+    "id" : 2,
+    "name" : "nodeReplaced",
+    "displayName" : "NodeReplaced",
+    "description" : "Fired when a node is replaced by another one",
+    "aliases" : [ ],
+    "attributes" : [ {
+      "name" : "newNodeName",
+      "required" : true
+    }, {
+      "name" : "nodeName",
+      "required" : true
+    }, {
+      "name" : "oldNodeName",
+      "required" : true
+    }, {
+      "name" : "requestId",
+      "required" : false
+    }, {
+      "name" : "userId",
+      "required" : false
+    } ]
+  }, {
+    "id" : 3,
+    "name" : "nodeDeleted",
+    "displayName" : "NodeDeleted",
+    "description" : "Fired when a node is removed",
+    "aliases" : [ ],
+    "attributes" : [ {
+      "name" : "oldNodeName",
+      "required" : true
+    }, {
+      "name" : "nodeName",
+      "required" : true
+    }, {
+      "name" : "requestId",
+      "required" : false
+    }, {
+      "name" : "userId",
+      "required" : false
+    } ]
   } ],
   "attributes" : [ {
     "id" : 1,
@@ -104,7 +145,7 @@
     "constraints" : [ ],
     "catalogId" : "DEFAULT"
   }, {
-    "id" : 4,
+    "id" : 3,
     "name" : "hostName",
     "displayName" : "Host Name",
     "description" : "Name of the server",
@@ -118,7 +159,7 @@
     "constraints" : [ ],
     "catalogId" : "DEFAULT"
   }, {
-    "id" : 5,
+    "id" : 4,
     "name" : "requestId",
     "displayName" : "RequestId",
     "description" : "Unique correlation id for a request",
@@ -132,7 +173,7 @@
     "constraints" : [ ],
     "catalogId" : "DEFAULT"
   }, {
-    "id" : 6,
+    "id" : 5,
     "name" : "queueItemId",
     "displayName" : "QueueItemId",
     "description" : "Unique id per master of a task as it moves through the queue and other runs",
@@ -146,7 +187,7 @@
     "constraints" : [ ],
     "catalogId" : "DEFAULT"
   }, {
-    "id" : 7,
+    "id" : 6,
     "name" : "nodeName",
     "displayName" : "NodeName",
     "description" : "Name of node where action is happening or being applied to",
@@ -160,7 +201,7 @@
     "constraints" : [ ],
     "catalogId" : "DEFAULT"
   }, {
-    "id" : 8,
+    "id" : 7,
     "name" : "oldNodeName",
     "displayName" : "OldNodeName",
     "description" : "Name of old node being replaced or removed",
@@ -174,7 +215,7 @@
     "constraints" : [ ],
     "catalogId" : "DEFAULT"
   }, {
-    "id" : 9,
+    "id" : 8,
     "name" : "newNodeName",
     "displayName" : "NewNodeName",
     "description" : "Name of node that's replacing an old one or being newly created",
