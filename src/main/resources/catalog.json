@@ -79,13 +79,6 @@
       "name" : "userId",
       "required" : false
     } ]
-  }, {
-    "id" : 3,
-    "name" : "nodeReplaced",
-    "displayName" : "NodeReplaced",
-    "description" : "Fired when a node is replaced by another one",
-    "aliases" : [ ],
-    "attributes" : [ ]
   } ],
   "attributes" : [ {
     "id" : 1,
