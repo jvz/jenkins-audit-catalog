@@ -52,16 +52,6 @@
   } ],
   "events" : [ {
     "id" : 1,
-    "name" : "enterItemWaiting",
-    "displayName" : "EnterItemWaiting",
-    "description" : "The first stage of a task being submitted the queue",
-    "aliases" : [ ],
-    "attributes" : [ {
-      "name" : "queueItemId",
-      "required" : true
-    } ]
-  }, {
-    "id" : 2,
     "name" : "nodeCreated",
     "displayName" : "NodeCreated",
     "description" : "Fired when a node is newly created",
