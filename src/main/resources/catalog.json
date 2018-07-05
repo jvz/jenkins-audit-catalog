@@ -42,8 +42,51 @@
     "description" : "Execution slot for builds on nodes",
     "catalogId" : "DEFAULT",
     "events" : [ ]
+  }, {
+    "id" : 6,
+    "name" : "task",
+    "displayName" : "Task",
+    "description" : "An executable entry in the build queue",
+    "catalogId" : "DEFAULT",
+    "events" : [ ]
   } ],
-  "events" : [ ],
+  "events" : [ {
+    "id" : 1,
+    "name" : "enterItemWaiting",
+    "displayName" : "EnterItemWaiting",
+    "description" : "The first stage of a task being submitted the queue",
+    "aliases" : [ ],
+    "attributes" : [ {
+      "name" : "queueItemId",
+      "required" : true
+    } ]
+  }, {
+    "id" : 2,
+    "name" : "nodeCreated",
+    "displayName" : "NodeCreated",
+    "description" : "Fired when a node is newly created",
+    "aliases" : [ ],
+    "attributes" : [ {
+      "name" : "newNodeName",
+      "required" : true
+    }, {
+      "name" : "nodeName",
+      "required" : true
+    }, {
+      "name" : "requestId",
+      "required" : false
+    }, {
+      "name" : "userId",
+      "required" : false
+    } ]
+  }, {
+    "id" : 3,
+    "name" : "nodeReplaced",
+    "displayName" : "NodeReplaced",
+    "description" : "Fired when a node is replaced by another one",
+    "aliases" : [ ],
+    "attributes" : [ ]
+  } ],
   "attributes" : [ {
     "id" : 1,
     "name" : "ipAddress",
@@ -87,6 +130,76 @@
     "sortable" : true,
     "required" : false,
     "requestContext" : true,
+    "examples" : null,
+    "aliases" : [ ],
+    "constraints" : [ ],
+    "catalogId" : "DEFAULT"
+  }, {
+    "id" : 5,
+    "name" : "requestId",
+    "displayName" : "RequestId",
+    "description" : "Unique correlation id for a request",
+    "dataType" : "STRING",
+    "indexed" : true,
+    "sortable" : false,
+    "required" : true,
+    "requestContext" : true,
+    "examples" : null,
+    "aliases" : [ ],
+    "constraints" : [ ],
+    "catalogId" : "DEFAULT"
+  }, {
+    "id" : 6,
+    "name" : "queueItemId",
+    "displayName" : "QueueItemId",
+    "description" : "Unique id per master of a task as it moves through the queue and other runs",
+    "dataType" : "LONG",
+    "indexed" : true,
+    "sortable" : true,
+    "required" : false,
+    "requestContext" : false,
+    "examples" : null,
+    "aliases" : [ ],
+    "constraints" : [ ],
+    "catalogId" : "DEFAULT"
+  }, {
+    "id" : 7,
+    "name" : "nodeName",
+    "displayName" : "NodeName",
+    "description" : "Name of node where action is happening or being applied to",
+    "dataType" : "STRING",
+    "indexed" : true,
+    "sortable" : false,
+    "required" : true,
+    "requestContext" : true,
+    "examples" : null,
+    "aliases" : [ ],
+    "constraints" : [ ],
+    "catalogId" : "DEFAULT"
+  }, {
+    "id" : 8,
+    "name" : "oldNodeName",
+    "displayName" : "OldNodeName",
+    "description" : "Name of old node being replaced or removed",
+    "dataType" : "STRING",
+    "indexed" : false,
+    "sortable" : false,
+    "required" : false,
+    "requestContext" : false,
+    "examples" : null,
+    "aliases" : [ ],
+    "constraints" : [ ],
+    "catalogId" : "DEFAULT"
+  }, {
+    "id" : 9,
+    "name" : "newNodeName",
+    "displayName" : "NewNodeName",
+    "description" : "Name of node that's replacing an old one or being newly created",
+    "dataType" : "STRING",
+    "indexed" : false,
+    "sortable" : false,
+    "required" : false,
+    "requestContext" : false,
     "examples" : null,
     "aliases" : [ ],
     "constraints" : [ ],
