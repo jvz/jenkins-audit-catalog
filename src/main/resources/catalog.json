@@ -7,7 +7,42 @@
     "catalogId" : "DEFAULT",
     "events" : [ ]
   } ],
-  "categories" : [ ],
+  "categories" : [ {
+    "id" : 1,
+    "name" : "build",
+    "displayName" : "Build",
+    "description" : "Result of a single execution of a project",
+    "catalogId" : "DEFAULT",
+    "events" : [ ]
+  }, {
+    "id" : 2,
+    "name" : "item",
+    "displayName" : "Item",
+    "description" : "A project, pipeline, or folder",
+    "catalogId" : "DEFAULT",
+    "events" : [ ]
+  }, {
+    "id" : 3,
+    "name" : "queue",
+    "displayName" : "Queue",
+    "description" : "Build queue of current and future builds to execute",
+    "catalogId" : "DEFAULT",
+    "events" : [ ]
+  }, {
+    "id" : 4,
+    "name" : "node",
+    "displayName" : "Node",
+    "description" : "A machine where pipelines and projects can be executed",
+    "catalogId" : "DEFAULT",
+    "events" : [ ]
+  }, {
+    "id" : 5,
+    "name" : "executor",
+    "displayName" : "Executor",
+    "description" : "Execution slot for builds on nodes",
+    "catalogId" : "DEFAULT",
+    "events" : [ ]
+  } ],
   "events" : [ ],
   "attributes" : [ {
     "id" : 1,
@@ -33,20 +68,6 @@
     "name" : "userId",
     "displayName" : "UserId",
     "description" : "Id of the User",
-    "dataType" : "STRING",
-    "indexed" : true,
-    "sortable" : true,
-    "required" : true,
-    "requestContext" : true,
-    "examples" : null,
-    "aliases" : [ ],
-    "constraints" : [ ],
-    "catalogId" : "DEFAULT"
-  }, {
-    "id" : 3,
-    "name" : "loginId",
-    "displayName" : "LoginId",
-    "description" : "Id user logs in with",
     "dataType" : "STRING",
     "indexed" : true,
     "sortable" : true,
